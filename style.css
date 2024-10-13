@@ -1,0 +1,240 @@
+/* Hero section styling */
+.hero-section {
+    background-color: #e8f1f1;
+    padding: 100px 0;
+}
+
+.hero-section h1 {
+    margin-bottom: 20px;
+}
+
+.hero-section .small-text {
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.hero-section .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+/* Vertical lines styling */
+.vertical-lines {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.vertical-line {
+    width: 5px;
+    background-color: #ffc107;
+    border-radius: 10px;
+}
+
+.vr-s {
+    height: 40px;
+}
+
+.vr-m {
+    height: 100px;
+}
+
+.vr-l {
+    height: 200px;
+}
+
+
+
+/* SVG szöveg animáció */
+
+svg {
+    width: 400px;
+    height: 100px;
+    margin: 0px;
+    display: block;
+    margin: auto;
+}
+
+svg text {
+    fill: none;
+    stroke: #E8F0F0;
+    stroke-width: 2;
+    stroke-dasharray: 600;
+    /* Megfelelő érték a szöveg hosszához */
+    stroke-dashoffset: 600;
+    animation: drawText 12s infinite;
+}
+
+@keyframes drawText {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+
+
+/* Scrolling Panels Section */
+.scrolling-panels {
+    overflow: hidden;
+    background-color: #718181;
+    padding: 20px 0;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.30) inset;
+}
+
+.panel-container {
+    display: flex;
+    gap: 20px;
+    animation: scrollPanels 20s linear infinite;
+    /* Continuous scroll */
+}
+
+.panel {
+    min-width: 200px;
+    height: 120px;
+    background-color: #E8F0F0;
+    box-shadow: 8px 12px 30px 0px rgba(0, 0, 0, 0.30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+/* Scroll animation */
+@keyframes scrollPanels {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-200px * 12 - 20px * 12));
+    }
+}
+
+
+
+
+/* Négy nagy doboz */
+
+.negy-doboz {
+    background-color: #E8F0F0;
+    border-radius: 8px;
+    padding: 28px;
+    margin: 8px;
+
+}
+
+.negy-doboz h3 {
+    margin-bottom: 4px;
+}
+
+.negy-doboz hr {
+    height: 5px;
+    background-color: #017172;
+    border: none;
+    border-radius: 4px;
+    opacity: 1;
+    margin: 0.4rem 0;
+}
+
+.card {
+    transition: all 0.4s ease-in-out;
+    box-shadow: 8px 12px 30px 0px rgba(0, 0, 0, 0.30);
+}
+
+.cards .card:hover {
+    /*transform: scale(1.01, 1.01);*/
+
+}
+
+.cards:hover>.card:not(:hover) {
+    filter: blur(2px);
+    /*transform: scale(0.99, 0.99);*/
+
+}
+
+
+ul.yellow-square {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+ul.yellow-square li::before {
+    content: "\25A0";
+    color: #EEB902;
+    margin-right: 10px;
+}
+
+
+
+
+/* JS szekció */
+
+.js-section {
+    background-color: #E8F0F0;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.form-control {
+    width: 240px;
+}
+
+
+.js-panel {
+    box-shadow: 8px 12px 30px 0px rgba(0, 0, 0, 0.30);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+#newItem {
+    width: 240px;
+}
+
+#addButton {
+    background-color: #017172;
+    border: none;
+    height: 40px;
+    margin-left: 16px;
+}
+
+#addButton:hover {
+    background-color: #01595b;
+}
+
+#addAutomaticButton {
+    background-color: #003333;
+    margin-left: 16px;
+}
+
+.vertical-lines.bal {
+    justify-content: end;
+    margin-right: 40px;
+}
+
+.vertical-lines.jobb {
+    margin-left: 40px;
+}
+
+
+@media (max-width: 768px) {
+    .js-panel {
+        width: 80%;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    #newItem {
+        width: 150px;
+    }
+}
